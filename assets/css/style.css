@@ -761,14 +761,14 @@ body:not(.home) {
   flex: 1 1 100%; /* default: full width (mobile) */
 }
 
-/* Tablet (≥768px) → 2 in a row */
+/* Tablet (â‰¥768px) â†’ 2 in a row */
 @media (min-width: 768px) {
   .featdivmainforwidth {
     flex: 1 1 calc(50% - 1rem);
   }
 }
 
-/* Laptop/Desktop (≥992px) → 4 in a row */
+/* Laptop/Desktop (â‰¥992px) â†’ 4 in a row */
 @media (min-width: 992px) {
   .featdivmainforwidth {
     flex: 1 1 calc(25% - 1rem);
