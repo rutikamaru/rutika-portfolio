@@ -140,3 +140,26 @@ $(function () {
       .to(".educationsec", { "--afterY": "0%", duration: 1.5, ease: "power3.out" }, "-=1");
   }
 })(); 
+
+// offcanvas menu
+(function() {
+  // Make sure the DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Select all nav links inside the offcanvas
+    const offcanvasLinks = document.querySelectorAll('#offcanvasnav .nav-link');
+
+    offcanvasLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Get the offcanvas element
+        const offcanvasEl = document.getElementById('offcanvasnav');
+        if (offcanvasEl) {
+          // Use Bootstrap 5 API to hide it
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+          if (bsOffcanvas) {
+            bsOffcanvas.hide();
+          }
+        }
+      });
+    });
+  });
+})();

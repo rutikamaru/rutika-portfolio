@@ -784,10 +784,10 @@ body:not(.home) {
 /* productsec */
 .productsec {
   background: url(../images/72374397_aaaa\ 21.jpg);
-  background-size: cover;
-  background-position: end;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+      background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
    .product-card {
       border: 1px solid var(--theme_secondary);
@@ -1076,4 +1076,11 @@ footer {
         }
     }
 
+}
+
+@media (max-width: 768px) {
+  .fs-md-16 {
+    font-size: 16px;
+}
+  
 }
