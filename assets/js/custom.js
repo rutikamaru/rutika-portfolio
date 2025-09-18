@@ -1,14 +1,6 @@
 
 
-// locomotive scroll
-document.addEventListener("DOMContentLoaded", function () {
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    multiplier: 0.8, // scroll speed (increase for faster, decrease for smoother)
-  });
-});
-
+ 
  
 // sticky header
 const header = document.querySelector(".page-header");
@@ -25,47 +17,43 @@ window.addEventListener("scroll", () => {
 
 
 // image hover scroll
-window.addEventListener("load", function () {
-  var containers = document.querySelectorAll(".figmacard--work");
+// window.addEventListener("load", function () {
+//   var containers = document.querySelectorAll(".figmacard--work");
 
-  containers.forEach(function (container) {
-    var img = container.querySelector(".figmaiagepreview img");
-    if (!img) return;
+//   containers.forEach(function (container) {
+//     var img = container.querySelector(".figmaiagepreview img");
+//     if (!img) return;
 
-    var imageHeight = img.naturalHeight;
-    container.style.height = "400px";
+//     var imageHeight = img.naturalHeight;
+//     container.style.height = "400px";
 
-    function scrollImageToBottom() {
-      var scrollAmount = Math.max(0, imageHeight - container.clientHeight);
-      var speed = 300; // px per second (adjust for faster/slower)
-      var duration = scrollAmount / speed;
+//     function scrollImageToBottom() {
+//       var scrollAmount = Math.max(0, imageHeight - container.clientHeight);
+//       var speed = 300; // px per second (adjust for faster/slower)
+//       var duration = scrollAmount / speed;
 
-      img.style.transition = `transform ${duration}s linear`;
-      img.style.transform = `translateY(-${scrollAmount}px)`;
-    }
+//       img.style.transition = `transform ${duration}s linear`;
+//       img.style.transform = `translateY(-${scrollAmount}px)`;
+//     }
 
-    function scrollImageToTop() {
-      var scrollAmount = Math.max(0, imageHeight - container.clientHeight);
-      var speed = 3500; // same speed back up
-      var duration = scrollAmount / speed;
+//     function scrollImageToTop() {
+//       var scrollAmount = Math.max(0, imageHeight - container.clientHeight);
+//       var speed = 3500; // same speed back up
+//       var duration = scrollAmount / speed;
 
-      img.style.transition = `transform ${duration}s linear`;
-      img.style.transform = "translateY(0)";
-    }
+//       img.style.transition = `transform ${duration}s linear`;
+//       img.style.transform = "translateY(0)";
+//     }
 
-    container.addEventListener("mouseenter", scrollImageToBottom);
-    container.addEventListener("mouseleave", scrollImageToTop);
+//     container.addEventListener("mouseenter", scrollImageToBottom);
+//     container.addEventListener("mouseleave", scrollImageToTop);
 
-    container.addEventListener("click", function () {
-      var modalImg = document.getElementById("figimage");
-      if (modalImg) modalImg.src = img.src;
-    });
-  });
-});
-
-
-
-
+//     container.addEventListener("click", function () {
+//       var modalImg = document.getElementById("figimage");
+//       if (modalImg) modalImg.src = img.src;
+//     });
+//   });
+// });
 
 // divs displays
  

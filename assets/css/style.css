@@ -1083,3 +1083,8 @@ footer {
 }
   
 }
+
+.figmaiagepreview.text-center
+ {
+    max-height: 350px;
+}
